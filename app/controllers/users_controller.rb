@@ -13,6 +13,10 @@ class UsersController < ApplicationController
         redirect_to root_path, :alert => "Access denied."
       end
     end
+
+    @tests = @user.tests.all
+    @test = @user.tests.build
+
   end
 
   def update

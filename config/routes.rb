@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :testts
+  resources :tests
+  resources :tests
+  resources :ideas
   resources :ride_offer_comments
   resources :forum_comments
   resources :forums

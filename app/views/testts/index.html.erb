@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Testts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+      <th>Current user</th>
+      <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @testts.each do |testt| %>
+      <tr>
+        <td><%= testt.name %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <td><%= testt.current_user_id %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <td><%= link_to 'Show', testt %></td>
+        <td><%= link_to 'Edit', edit_testt_path(testt) %></td>
+        <td><%= link_to 'Destroy', testt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Testt', new_testt_path %>

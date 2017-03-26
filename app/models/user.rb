@@ -15,4 +15,5 @@ class User < ActiveRecord::Base
   has_many :friends
   has_many :ride_offers
   has_many :forum
+  has_many :tests
 end

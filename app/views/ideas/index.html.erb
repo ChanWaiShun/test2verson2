@@ -6,8 +6,15 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
       <th>Description</th>
+      <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
       <th>Picture</th>
+      <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+      <th>idea id</th>
+      <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+      <th>user id</th>
+      <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +23,19 @@
     <% @ideas.each do |idea| %>
       <tr>
         <td><%= idea.name %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
         <td><%= idea.description %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
         <td><%= idea.picture %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <td><%= idea.id %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <td><%= idea.id %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th><th>&nbsp&nbsp&nbsp&nbsp&nbsp</th><th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
         <td><%= link_to 'Show', idea %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
         <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
         <td><%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
