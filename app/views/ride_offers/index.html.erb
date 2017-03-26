@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ride Offers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Role</th>
+      <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+      <th>Source</th>
+      <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+      <th>Destination</th>
+      <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+      <th>Date(mm/dd/yyyy)</th>
+      <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+      <th>Time(24-hour clock)</th>
+      <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ride_offers.each do |ride_offer| %>
+      <tr>
+        <td><%= ride_offer.role %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <td><%= ride_offer.source %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <td><%= ride_offer.destination %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <td><%= ride_offer.date %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <td><%= ride_offer.time %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th><th>&nbsp&nbsp&nbsp&nbsp&nbsp</th><th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <td><%= link_to 'Show', ride_offer %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <td><%= link_to 'Edit', edit_ride_offer_path(ride_offer) %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <% if current_user.id===2 %>
+        <td><%= link_to 'Destroy', ride_offer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ride offer', new_ride_offer_path %>
+<br>

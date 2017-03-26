@@ -1,0 +1,1 @@
+json.partial! "recent_changes/recent_change", recent_change: @recent_change

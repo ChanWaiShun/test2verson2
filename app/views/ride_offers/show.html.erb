@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @ride_offer.role %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @ride_offer.source %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @ride_offer.destination %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @ride_offer.date %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @ride_offer.time %>
+</p>
+
+<h3>Comments</h3>
+<% @ride_offer_comments.each do |ride_offer_comment| %>
+    <div>
+      <strong><%= ride_offer_comment.user_name %></strong>
+      <br/>
+      <p><%= ride_offer_comment.body %></p>
+      <% if current_user.id===2 %>
+      <p><%= link_to 'Delete', ride_offer_comment_path(ride_offer_comment), method: :delete, data: {confirm: 'Are you sure?'} %></p>
+      <% end %>
+    </div>
+<% end %>
+<%= render 'ride_offer_comments/form' %>
+
+
+<%= link_to 'Edit', edit_ride_offer_path(@ride_offer) %> |
+<%= link_to 'Back', ride_offers_path %>

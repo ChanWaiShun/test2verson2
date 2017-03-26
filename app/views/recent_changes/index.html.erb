@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Recent Changes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Version</th>
+      <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+      <th>Title</th>
+      <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+      <th>Date</th>
+      <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recent_changes.each do |recent_change| %>
+      <tr>
+        <td><%= recent_change.version %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <td><%= recent_change.title %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <td><%= recent_change.date %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <td><%= link_to 'Show', recent_change %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <% if user_signed_in? %>
+            <% if current_user.id===2 %>
+        <td><%= link_to 'Edit', edit_recent_change_path(recent_change) %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <td><%= link_to 'Destroy', recent_change, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% end %>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<% if user_signed_in? %>
+    <% if current_user.id===2 %>
+ <%= link_to 'New Recent change', new_recent_change_path %>
+    <% end %>
+<% end %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User name:</strong>
+  <%= @ride_offer_comment.user_name %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @ride_offer_comment.body %>
+</p>
+
+<p>
+  <strong>Ride offer:</strong>
+  <%= @ride_offer_comment.ride_offer_id %>
+</p>
+
+<%= link_to 'Edit', edit_ride_offer_comment_path(@ride_offer_comment) %> |
+<%= link_to 'Back', ride_offers_path %>

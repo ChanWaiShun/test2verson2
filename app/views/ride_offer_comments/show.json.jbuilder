@@ -1,0 +1,1 @@
+json.partial! "ride_offer_comments/ride_offer_comment", ride_offer_comment: @ride_offer_comment

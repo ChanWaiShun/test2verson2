@@ -1,0 +1,1 @@
+json.partial! "profile_contents/profile_content", profile_content: @profile_content

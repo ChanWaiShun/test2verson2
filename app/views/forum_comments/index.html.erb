@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Forum Comments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+      <th>Body</th>
+      <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+      <th>Forum_id</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @forum_comments.each do |forum_comment| %>
+      <tr>
+        <td><%= forum_comment.user_name %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <td><%= forum_comment.body %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <td><%= forum_comment.forum_id %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <td><%= link_to 'Show', forum_comment %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th><th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <td><%= link_to 'Edit', edit_forum_comment_path(forum_comment) %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th><th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <td><%= link_to 'Destroy', forum_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Forum comment', new_forum_comment_path %>

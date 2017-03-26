@@ -1,0 +1,1 @@
+json.array! @profile_contents, partial: 'profile_contents/profile_content', as: :profile_content

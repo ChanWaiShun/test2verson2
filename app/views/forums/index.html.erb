@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Forums</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Topic</th>
+      <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+      <th>Body</th>
+      <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @forums.each do |forum| %>
+      <tr>
+        <td><%= forum.topic %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <td><%= forum.body %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <td><%= link_to 'Show', forum %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <td><%= link_to 'Edit', edit_forum_path(forum) %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <% if current_user.id===2 %>
+        <td><%= link_to 'Destroy', forum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Forum', new_forum_path %>

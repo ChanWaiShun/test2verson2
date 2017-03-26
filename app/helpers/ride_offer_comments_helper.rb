@@ -1,0 +1,2 @@
+module RideOfferCommentsHelper
+end

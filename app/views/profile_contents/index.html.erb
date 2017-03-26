@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Profile Contents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @profile_contents.each do |profile_content| %>
+      <tr>
+        <td><%= profile_content.title %></td>
+        <td><%= profile_content.content %></td>
+        <td><%= link_to 'Show', profile_content %></td>
+        <td><%= link_to 'Edit', edit_profile_content_path(profile_content) %></td>
+        <td><%= link_to 'Destroy', profile_content, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Profile content', new_profile_content_path %>

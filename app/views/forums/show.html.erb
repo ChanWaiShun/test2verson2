@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Topic:</strong>
+  <%= @forum.topic %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @forum.body %>
+</p>
+
+<h3>Comments</h3>
+<% @forum_comments.each do |forum_comment| %>
+    <div>
+      <strong><%= forum_comment.user_name %></strong>
+      <br/>
+      <p><%= forum_comment.body %></p>
+      <% if current_user.id===2 %>
+      <p><%= link_to 'Delete',forum_comment_path(forum_comment), method: :delete, data: {confirm: 'Are you sure?'} %></p>
+      <% end %>
+    </div>
+<% end %>
+<%= render 'forum_comments/form' %>
+
+<%= link_to 'Edit', edit_forum_path(@forum) %> |
+<%= link_to 'Back', forums_path %>

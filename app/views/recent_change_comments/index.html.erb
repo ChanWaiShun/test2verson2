@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Recent Change Comments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User name</th>
+      <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+      <th>Body</th>
+      <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+      <th>Recent change id</th>
+      <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recent_change_comments.each do |recent_change_comment| %>
+      <tr>
+        <td><%= recent_change_comment.user_name %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <td><%= recent_change_comment.body %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <td><%= recent_change_comment.recent_change_id %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <td><%= link_to 'Show', recent_change_comment %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <% if user_signed_in? %>
+        <td><%= link_to 'Edit', edit_recent_change_comment_path(recent_change_comment) %></td>
+        <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+        <td><%= link_to 'Destroy', recent_change_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% else %>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

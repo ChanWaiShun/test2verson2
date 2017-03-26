@@ -1,0 +1,498 @@
+<dataSource name="Rails test2: development">
+  <database-model serializer="dbm" rdbms="SQLITE" format-version="2.6">
+    <schema id="1">
+      <visible>1</visible>
+    </schema>
+    <table id="2" parent="1" name="about_us" />
+    <table id="3" parent="1" name="comments" />
+    <table id="4" parent="1" name="forum_comments" />
+    <table id="5" parent="1" name="forums" />
+    <table id="6" parent="1" name="friends" />
+    <table id="7" parent="1" name="ideas" />
+    <table id="8" parent="1" name="information" />
+    <table id="9" parent="1" name="profile_contents" />
+    <table id="10" parent="1" name="profiles" />
+    <table id="11" parent="1" name="recent_change_comments" />
+    <table id="12" parent="1" name="recent_changes" />
+    <table id="13" parent="1" name="ride_offer_comments" />
+    <table id="14" parent="1" name="ride_offers" />
+    <table id="15" parent="1" name="schema_migrations" />
+    <table id="16" parent="1" name="sponsors" />
+    <table id="17" parent="1" name="sqlite_sequence" />
+    <table id="18" parent="1" name="tests" />
+    <table id="19" parent="1" name="testts" />
+    <table id="20" parent="1" name="users" />
+    <column id="21" parent="2" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="22" parent="2" name="name">
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="23" parent="2" name="phone">
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="24" parent="2" name="created_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <column id="25" parent="2" name="updated_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <key id="26" parent="2">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="27" parent="3" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="28" parent="3" name="user_name">
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="29" parent="3" name="body">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="30" parent="3" name="idea_id">
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="31" parent="3" name="created_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <column id="32" parent="3" name="updated_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <key id="33" parent="3">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="34" parent="4" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="35" parent="4" name="user_name">
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="36" parent="4" name="body">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="37" parent="4" name="forum_id">
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="38" parent="4" name="created_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <column id="39" parent="4" name="updated_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <key id="40" parent="4">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="41" parent="5" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="42" parent="5" name="topic">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="43" parent="5" name="body">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="44" parent="5" name="created_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <column id="45" parent="5" name="updated_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <key id="46" parent="5">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="47" parent="6" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="48" parent="6" name="name">
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="49" parent="6" name="description">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="50" parent="6" name="created_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <column id="51" parent="6" name="updated_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <column id="52" parent="6" name="user_id">
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <key id="53" parent="6">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="54" parent="7" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="55" parent="7" name="name">
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="56" parent="7" name="description">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="57" parent="7" name="picture">
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="58" parent="7" name="created_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <column id="59" parent="7" name="updated_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <key id="60" parent="7">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="61" parent="8" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="62" parent="8" name="name">
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="63" parent="8" name="phone">
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="64" parent="8" name="created_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <column id="65" parent="8" name="updated_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <key id="66" parent="8">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="67" parent="9" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="68" parent="9" name="title">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="69" parent="9" name="content">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="70" parent="9" name="created_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <column id="71" parent="9" name="updated_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <column id="72" parent="9" name="profile_id">
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <key id="73" parent="9">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="74" parent="10" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="75" parent="10" name="image">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="76" parent="10" name="name">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="77" parent="10" name="phone">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="78" parent="10" name="created_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <column id="79" parent="10" name="updated_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <key id="80" parent="10">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="81" parent="11" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="82" parent="11" name="user_name">
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="83" parent="11" name="body">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="84" parent="11" name="recent_change_id">
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="85" parent="11" name="created_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <column id="86" parent="11" name="updated_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <key id="87" parent="11">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="88" parent="12" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="89" parent="12" name="version">
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="90" parent="12" name="date">
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="91" parent="12" name="title">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="92" parent="12" name="body">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="93" parent="12" name="created_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <column id="94" parent="12" name="updated_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <key id="95" parent="12">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="96" parent="13" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="97" parent="13" name="user_name">
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="98" parent="13" name="body">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="99" parent="13" name="ride_offer_id">
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="100" parent="13" name="created_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <column id="101" parent="13" name="updated_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <key id="102" parent="13">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="103" parent="14" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="104" parent="14" name="role">
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="105" parent="14" name="source">
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="106" parent="14" name="destination">
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="107" parent="14" name="date">
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="108" parent="14" name="time">
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="109" parent="14" name="created_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <column id="110" parent="14" name="updated_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <key id="111" parent="14">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="112" parent="15" name="version">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <index id="113" parent="15" name="unique_schema_migrations">
+      <columns>version</columns>
+      <desc-columns />
+      <unique>1</unique>
+    </index>
+    <column id="114" parent="16" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="115" parent="16" name="name">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="116" parent="16" name="brand">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="117" parent="16" name="created_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <column id="118" parent="16" name="updated_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <key id="119" parent="16">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="120" parent="17" name="name">
+      <data-type>(0,-1)|12</data-type>
+    </column>
+    <column id="121" parent="17" name="seq">
+      <data-type>(0,-1)|12</data-type>
+    </column>
+    <column id="122" parent="18" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="123" parent="18" name="name">
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="124" parent="18" name="user_id">
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="125" parent="18" name="created_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <column id="126" parent="18" name="updated_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <key id="127" parent="18">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="128" parent="19" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="129" parent="19" name="name">
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="130" parent="19" name="current_user_id">
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="131" parent="19" name="created_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <column id="132" parent="19" name="updated_at">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <key id="133" parent="19">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="134" parent="20" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="135" parent="20" name="email">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(0,-1)|12</data-type>
+      <default-expression>''</default-expression>
+    </column>
+    <column id="136" parent="20" name="encrypted_password">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(0,-1)|12</data-type>
+      <default-expression>''</default-expression>
+    </column>
+    <column id="137" parent="20" name="reset_password_token">
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="138" parent="20" name="reset_password_sent_at">
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <column id="139" parent="20" name="remember_created_at">
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <column id="140" parent="20" name="sign_in_count">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+      <default-expression>0</default-expression>
+    </column>
+    <column id="141" parent="20" name="current_sign_in_at">
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <column id="142" parent="20" name="last_sign_in_at">
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <column id="143" parent="20" name="current_sign_in_ip">
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="144" parent="20" name="last_sign_in_ip">
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="145" parent="20" name="created_at">
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <column id="146" parent="20" name="updated_at">
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <column id="147" parent="20" name="name">
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="148" parent="20" name="role">
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="149" parent="20" name="index_users_on_email">
+      <columns>email</columns>
+      <desc-columns />
+      <unique>1</unique>
+    </index>
+    <index id="150" parent="20" name="index_users_on_reset_password_token">
+      <columns>reset_password_token</columns>
+      <desc-columns />
+      <unique>1</unique>
+    </index>
+    <key id="151" parent="20">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>

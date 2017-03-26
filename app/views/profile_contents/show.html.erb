@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @profile_content.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @profile_content.content %>
+</p>
+
+<%= link_to 'Edit', edit_profile_content_path(@profile_content) %> |
+<%= link_to 'Back', profile_contents_path %>
