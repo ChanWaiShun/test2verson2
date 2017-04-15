@@ -1,0 +1,1 @@
+json.partial! "testgmaps/testgmap", testgmap: @testgmap

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :testgmaps
   resources :testts
   resources :tests
   resources :tests

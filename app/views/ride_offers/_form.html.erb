@@ -30,8 +30,15 @@
   </div>
   <div class="field">
     <%= f.label :time %>(24-hour clock)<br>
-    <%= f.number_field :time %>
+    <%= f.text_field :time %>
   </div>
+    <div class="field">
+      <%= f.label :phone %><br>
+      <%= f.text_field :phone %>
+    </div>
+
+
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -6,6 +6,11 @@ class RideOffersController < ApplicationController
   # GET /ride_offers.json
   def index
     @ride_offers = RideOffer.all
+    @hash = Gmaps4rails.build_markers(@ride_offers) do |ride_offer, marker|
+      marker.lat ride_offer.latitude
+      marker.lng ride_offer.longitude
+      marker.infowindow ride_offer.destination
+    end
   end
 
   # GET /ride_offers/1
@@ -72,6 +77,6 @@ class RideOffersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ride_offer_params
-      params.require(:ride_offer).permit(:role, :source, :destination, :date, :time)
+      params.require(:ride_offer).permit(:role, :source, :destination, :date, :time, :latitude, :longitude, :phone)
     end
 end

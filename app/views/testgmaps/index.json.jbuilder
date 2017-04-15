@@ -1,0 +1,1 @@
+json.array! @testgmaps, partial: 'testgmaps/testgmap', as: :testgmap

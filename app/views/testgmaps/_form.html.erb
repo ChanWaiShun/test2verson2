@@ -1,0 +1,47 @@
+<%= form_for(@testgmap) do |f| %>
+  <% if @testgmap.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@testgmap.errors.count, "error") %> prohibited this testgmap from being saved:</h2>
+
+      <ul>
+      <% @testgmap.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :latitude %><br>
+    <%= f.number_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br>
+    <%= f.number_field :longitude %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+
+
+
+      <div class="field">
+    <%= f.label :test %><br>
+    <%= f.text_field :test %>
+    </div>
+
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

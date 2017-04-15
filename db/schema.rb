@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170119035700) do
+ActiveRecord::Schema.define(version: 20170414132728) do
 
   create_table "about_us", force: :cascade do |t|
     t.string   "name"
@@ -112,9 +112,12 @@ ActiveRecord::Schema.define(version: 20170119035700) do
     t.string   "source"
     t.string   "destination"
     t.string   "date"
-    t.integer  "time"
+    t.string   "time"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "phone"
   end
 
   create_table "sponsors", force: :cascade do |t|
@@ -122,6 +125,17 @@ ActiveRecord::Schema.define(version: 20170119035700) do
     t.text     "brand"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "testgmaps", force: :cascade do |t|
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "address"
+    t.text     "description"
+    t.string   "title"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.text     "test"
   end
 
   create_table "tests", force: :cascade do |t|

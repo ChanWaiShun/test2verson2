@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @testgmap.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @testgmap.longitude %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @testgmap.address %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @testgmap.description %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @testgmap.title %>
+</p>
+
+<p>
+  <strong>Test:</strong>
+  <%= @testgmap.test %>
+</p>
+
+<%= link_to 'Edit', edit_testgmap_path(@testgmap) %> |
+<%= link_to 'Back', testgmaps_path %>
+

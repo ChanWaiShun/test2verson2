@@ -36,5 +36,5 @@ group :test do
 end
 gem 'tzinfo-data', '~> 1.2016', '>= 1.2016.6'
 gem 'coffee-script-source', '1.8.0'
-
-
+gem 'geocoder'
+gem 'gmaps4rails'
